@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: dashboard
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: 761212
+Implementation-Vendor-Id: com.bit.batch
+Build-Jdk: 1.8.0_172
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/dashboard
+Created-By: Maven Integration for Eclipse
+
