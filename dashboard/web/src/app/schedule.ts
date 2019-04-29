@@ -1,10 +1,10 @@
 export class Schedule {
-    servName:String;
-    exename:String;
-    maxdur:String;
-    depend:String;
-    runDays:String;
-    sTime:String;
-    eTime:String;
+    servName:string;
+    exename:string;
+    maxdur:string;
+    depend:string;
+    runDays:string;
+    sTime:string;
+    eTime:string;
 }
 
