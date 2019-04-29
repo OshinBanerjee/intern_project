@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addschedule.component.css']
 })
 export class AddscheduleComponent implements OnInit {
-
-  constructor() { }
+schedule:Schedule=new Schedule();
+  
+  constructor(private service:SchedulemonitorService) { }
 
   ngOnInit() {
   }
@@ -21,6 +22,21 @@ export class AddscheduleComponent implements OnInit {
     console.log(schedule.runDays);
     console.log(schedule.sTime);
     console.log(schedule.eTime);
+    
+        var scheduleJson={
+      "servName":batch.servName,
+      "jobId":batch.jobId,
+       "exename":batch.exename,
+       "maxdur":batch.maxdur,
+       "depend":batch.depend,
+       "runDays":batch.runDays,
+       "sTime":batch.sTime,
+          "eTime":batch.eTime
+    };
+    console.log(scheduleJson);
+    console.log('service obj:');
+    
+    this.service.addScheduleService(Appsettings.LOCAL_ENDPOINT+Appsettings.ADDSCHEDULE,scheduleJson);
   }
 
 }
