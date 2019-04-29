@@ -1,0 +1,60 @@
+<h1>SCHEDULE DETAILS</h1>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4"></div>    
+            <div class="col-lg-4">  
+                <div class="card">
+                    <div class="card-body">
+                        <div class="bg-image"></div>
+                        <form #schedule="ngForm" method="POST" (ngSubmit)=addSchedule(schedule) id="resetForm1" novalidate name="form_check">        
+                            <div class="form-group input-group-lg" id="g1">
+                                    <label for="serName" id="sname">Server Name</label>
+                                    <input type="text" class="form-control" id="serName" name="servName" [(ngModel)]="schedule.servName" pattern="[a-zA-Z].*"  minlength="8" placeholder="Enter Server Name" maxlength="30" onblur="showError(this.id,'sname','g1')" onfocus="hideError('g1')"required onkeyup="checkform()">
+                            </div>
+                            <div class="form-group input-group-lg" id="g7">
+                                <label for="selectJobId" id="sjid">Job ID</label>
+                                <select class="selectpicker" data-live-search="true" name="jobId" [(ngModel)]="schedule.jobId">
+                                    <option data-tokens="a">afgefggfgd</option>
+                                    <option data-tokens="b">bsdfgdsf</option>
+                                    <option data-tokens="c">cdfsdfsf</option>
+                                </select>
+                            </div>
+                            <div class="form-group input-group-lg" id="g2">
+                                <label for="exname" id="ename">Executable Name</label>
+                                    <input type="text" class="form-control" id="exname" pattern="[a-zA-Z].*" name="exename" [(ngModel)]="schedule.exename"  minlength="8" placeholder="Enter Executable Name" maxlength="35" onblur="showError(this.id,'ename','g2')" onfocus="hideError('g2')" required onkeyup="checkform()">
+                            </div>                          
+                            <div class="form-group input-group-lg" id="g3">
+                                <label for="maxdur" id="mdur">Maximum Duration(in days):</label>
+                                <input type="number" id="maxdur" min="0" max="500" class="form-control" name="maxdur" [(ngModel)]="schedule.maxdur"   onblur="showValidRange(this.id,'g3')" onfocus="hideError('g3')" required onkeyup="checkform()">
+                                
+                            </div>
+                            <div class="form-group input-group-lg" id="g4">
+                                <label for="depend" id="dep">Dependency</label>
+                                <input type="text" id="depend" class="form-control" maxlength="200" name="depend" [(ngModel)]="schedule.depend"   placeholder="Enter Dependency" onblur="showError(this.id,'dep','g4')" onfocus="hideError('g4')" onkeyup="checkform()">
+                              
+                            </div>
+                            <div class="form-group input-group-lg" id="g5">
+                              <label for="basic" id="timelabel">Run Days(in days)</label>
+                                 <input type="text" id="basic" style="width: 100%" name="runDays" [(ngModel)]="schedule.runDays"   required onkeyup="checkform()" >
+                            </div>
+                             <div class="row">
+                                 <div class="col-sm-6">
+                            <div class="form-group" id="g6">
+                                <label for="startTime" id="stime">Start Time</label>
+                                <input type="time" id="startTime" name="sTime" [(ngModel)]="schedule.sTime"  onblur="showError(this.id,'stime','g6')"  onfocus="hideError('g6')" required onkeyup="checkform()">
+                            </div></div>
+                           
+                                <div class="col-sm-6">
+                             <div class="form-group" id="g7">
+                                <label for="endTime" id="etime">End Time</label>
+                                <input type="time" id="endTime" name="eTime" [(ngModel)]="schedule.eTime"  onblur="showError(this.id,'etime','g7')"  onfocus="hideError('g7')" required onkeyup="checkform()">
+                            </div></div>
+                            </div>
+                            <br><br>
+                            <input type="submit" class="btn btn-success " id="submit_btn" value="SUBMIT">
+                             <input type="button" value="RESET" id="reset_btn" onclick="reset_form()" style="float: right" class="btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
