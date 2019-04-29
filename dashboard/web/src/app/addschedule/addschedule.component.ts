@@ -24,14 +24,14 @@ schedule:Schedule=new Schedule();
     console.log(schedule.eTime);
     
         var scheduleJson={
-      "servName":batch.servName,
-      "jobId":batch.jobId,
-       "exename":batch.exename,
-       "maxdur":batch.maxdur,
-       "depend":batch.depend,
-       "runDays":batch.runDays,
-       "sTime":batch.sTime,
-          "eTime":batch.eTime
+      "servName":schedule.servName,
+      "jobId":schedule.jobId,
+       "exename":schedule.exename,
+       "maxdur":schedule.maxdur,
+       "depend":schedule.depend,
+       "runDays":schedule.runDays,
+       "sTime":schedule.sTime,
+          "eTime":schedule.eTime
     };
     console.log(scheduleJson);
     console.log('service obj:');
