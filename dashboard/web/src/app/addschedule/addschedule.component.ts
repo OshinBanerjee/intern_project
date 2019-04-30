@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Schedule } from '../schedule';
+import { SchedulemonitorService } from '../service/schedulemonitor.service';
+import { Appsettings } from '../appsettings';
 
 @Component({
   selector: 'app-addschedule',
