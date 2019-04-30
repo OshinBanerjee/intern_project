@@ -1,5 +1,6 @@
 export class Schedule {
     servName:string;
+    jobId:string;
     exename:string;
     maxdur:string;
     depend:string;
